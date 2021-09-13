@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranga Special Store</title>
+  <title>Trendy E-commerce Store</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+  <!-- Bootstrap latest version -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,21 +15,30 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+
+  </header>
   <main class="main">
+     <h1 class="text-center mt-4">Buy Your Desirable Products</h1>
     <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+      <div class="search-box input-group mt-4 mb-4 w-50 mx-auto">
+        <input id="search-field" type="text" class="form-control" placeholder="Search Product">
+        <button onclick="loadProducts()" class="btn btn-color text-center text-white " type="button" id="button-addon2">Search</button>
+    </div>
+    </div>
+    <!-- Details Here  -->
+    <div class="container">
+      <div class="row">
+        <div id="details" class="col-md-6 col-lg-6 col-sm-4">
+
+        </div>
       </div>
     </div>
+    <!-- Result Here  -->
+
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+        <div id="all-products" class="container">
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
@@ -50,7 +56,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,13 +86,16 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-color text-center text-white">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
   <footer></footer>
+  <!-- Bootstrap JS CDN  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
