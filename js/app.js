@@ -6,7 +6,7 @@ const loadProducts = () => {
 		.then(data => showProducts(data));
 };
 
-//LoadPost() Function Call Here
+//LoadProducts() Function Call Here
 loadProducts();
 
 // show all product in UI 
@@ -25,7 +25,7 @@ const showProducts = (products) => {
       <h2>Price: $ ${product.price}</h2>
       <p>Rating: ${product.rating.rate}</p>
       <p>Total Ratings Count: ${product.rating.count}</p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">Add To Cart</button>
       <button id="details-btn" class="btn btn-danger" onclick="details(${product.id})">Details</button></div>
       `;
 		document.getElementById("all-products").appendChild(div);
@@ -98,7 +98,7 @@ const details = (id) => {
 	fetch(`https://fakestoreapi.com/products/${id}`)
 		.then(res => res.json())
 		.then(data => viewModal(data))
-}
+};
 //Display Details
 const viewModal = product => {
 	const detailsContainer = document.getElementById('details');
@@ -118,4 +118,4 @@ const viewModal = product => {
         </p>
   `
 	detailsContainer.appendChild(div)
-}
+};
